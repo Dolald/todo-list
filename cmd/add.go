@@ -1,19 +1,19 @@
-/*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/spf13/cobra"
 )
 
-// addCmd represents the add command
 var addCmd = &cobra.Command{
 	Use:   "add",
-	Short: "A brief description of your command",
-	// Run: func(cmd *cobra.Command, args []string) {
-	// 	fmt.Println("add called")
-	// },
+	Short: "Adds a task to your task list.",
+	Run: func(cmd *cobra.Command, args []string) {
+		newTask := strings.Join(args, " ")
+		fmt.Printf("Added \"%s\" to your list\n", newTask)
+	},
 }
 
 func init() {
