@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"list/cmd"
 	"list/db"
 	"path/filepath"
@@ -16,6 +15,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("asdasd")
 	cmd.Execute()
 }
